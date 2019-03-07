@@ -1,0 +1,148 @@
+
+<!DOCTYPE html>
+<html>
+
+<head>
+	<title>Distance Between Locations!</title>
+	<script type="text/javascript" src="script.js"></script>
+	<link rel="icon" href="https://banner2.kisspng.com/20180408/roe/kisspng-globe-europe-world-map-globe-5aca41b0a6d968.9646738315232045286834.jpg">
+</head>
+<link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+<style>
+
+@import "susy";
+@import "compass/reset";
+
+.stars, .twinkling, .clouds {
+	position:absolute;
+	display:block;
+	top:0; bottom:0;
+	left:0; right:0;
+	width:100%; height:100%;
+}
+
+.stars {
+	z-index: 0;
+	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+}
+
+.twinkling{
+	z-index: 1;
+	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
+	animation: move-twink-back 200s linear infinite;
+}
+
+.clouds{
+	z-index: 2;
+    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
+	animation: move-clouds-back 200s linear infinite;
+}
+
+@keyframes move-twink-back {
+	from {background-position:0 0;}
+	to {background-position:-10000px 5000px;}
+}
+
+@keyframes move-clouds-back {
+	from {background-position:0 0;}
+	to {background-position:10000px 0;}
+}
+
+
+
+input {
+  display:block;
+  
+  margin-top: 30px;
+  margin-bottom: 20px;
+  margin-right: 20px;
+  margin-left: 20px;
+
+  border:none;
+  height:20px;
+  width:80%;
+  border-radius:20px;
+  text-indent: 10px;
+}
+
+#calculate{
+  width:35%;
+  text-indent: 0px;
+  margin-left: 80px;
+}
+
+button {
+  margin :auto;
+  display:block;
+  background: transparent;
+  color: #fff;
+  border:2px solid #fff;
+  border-radius: 20px;
+  padding: 8px 20px;
+  cursor:pointer;
+}
+
+
+h1 {
+	font-family: 'Archivo';
+	font-size: 3em;
+	color: #fff;
+	text-align:center;
+}
+
+
+form {
+  position:relative;
+  margin:auto;
+  background-color: #2b86ec;
+  width:250px;
+  height:250px;
+  border-radius:2000px;
+  
+
+}
+
+p {
+	font-size: 1.2rem;
+	color: #fff;
+	text-align:center;
+}
+
+</style>
+
+
+
+<body>
+
+	<div class='stars'></div>
+	<div class='twinkling'></div>
+	<div class='clouds'>
+		
+
+		<h1><strong>Distance Between Locations
+
+
+		<p id="response">
+			
+
+		</p>
+
+
+		<form>	
+			<br>
+
+			<input type="text" id="loc1" value="St Paul">
+			<input type="text" id="loc2" value="London">
+			<input type="button" id="calculate" value="Calculate" onclick="calculateDistance( document.getElementById('loc1').value, document.getElementById('loc2').value );">
+
+		</form>
+
+		</strong></h1>
+
+
+
+
+
+
+</body>
+</html>
