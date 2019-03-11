@@ -3,109 +3,104 @@
 <html>
 
 <head>
-	<title>Distance Between Locations!</title>
+	<title>Steffan Musoke</title>
 	<script type="text/javascript" src="script.js"></script>
-	<link rel="icon" href="https://banner2.kisspng.com/20180408/roe/kisspng-globe-europe-world-map-globe-5aca41b0a6d968.9646738315232045286834.jpg">
+	<link rel="icon" href="https://image.flaticon.com/icons/svg/318/318959.svg">
 </head>
-<link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <style>
 
-@import "susy";
-@import "compass/reset";
+body{
+	font-family: 'Roboto', sans-serif;
+}
 
-.stars, .twinkling, .clouds {
-	position:absolute;
+#header{
+	position: relative;
+    top: 0;
+    width: 100%;
+    max-width: 90%;
+    padding: 20px 40px;
+    font-weight: bold;
+}
+
+div{
 	display:block;
-	top:0; bottom:0;
-	left:0; right:0;
-	width:100%; height:100%;
 }
 
-.stars {
-	z-index: 0;
-	background: #000 url('https://image.ibb.co/mjnygo/stars.png') repeat top center;
+ul{
+    display: block;
+    list-style-type: disc;
+    margin:auto;
 }
 
-.twinkling{
-	z-index: 1;
-	background:transparent url('https://image.ibb.co/ir1DE8/twinkling.png') repeat top center;
-	animation: move-twink-back 200s linear infinite;
-}
-
-.clouds{
-	z-index: 2;
-    background:transparent url('https://image.ibb.co/bT4N7T/clouds.png') repeat top center;
-	animation: move-clouds-back 200s linear infinite;
-}
-
-@keyframes move-twink-back {
-	from {background-position:0 0;}
-	to {background-position:-10000px 5000px;}
-}
-
-@keyframes move-clouds-back {
-	from {background-position:0 0;}
-	to {background-position:10000px 0;}
+li{
+    display: inline-block;
+    margin: 5px 5px 5px 30px;
+    font-size: 2em;
+    transition: 0.1s;
 }
 
 
-
-input {
-  display:block;
-  
-  margin-top: 30px;
-  margin-bottom: 20px;
-  margin-right: 20px;
-  margin-left: 20px;
-
-  border:none;
-  height:20px;
-  width:80%;
-  border-radius:20px;
-  text-indent: 10px;
+a:link {
+  color: black;
+  text-decoration: none;
 }
 
-#calculate{
-  width:35%;
-  text-indent: 0px;
-  margin-left: 80px;
+a:visited {
+  color: black;
+  text-decoration: none;
 }
 
-button {
-  margin :auto;
-  display:block;
-  background: transparent;
-  color: #fff;
-  border:2px solid #fff;
-  border-radius: 20px;
-  padding: 8px 20px;
-  cursor:pointer;
+a:active {
+  color: black;
+  text-decoration: none;
+}
+
+li:hover {
+	font-size: 2.4em;
 }
 
 
-h1 {
-	font-family: 'Archivo';
-	font-size: 3em;
-	color: #fff;
-	text-align:center;
+#homeImage{
+	float:left;
+	width: 30%;
+	margin-left: 5%;
+	border-radius: 10px;
+	display: block;
+}
+
+p{
+	margin-top: 6%;
+	display:inline-block;
+	font-size: 1.5em;
+	color: #626262;
 }
 
 
-form {
-  position:relative;
-  margin:auto;
-  background-color: #2b86ec;
-  width:250px;
-  height:250px;
-  border-radius:2000px;
-  
 
+
+
+
+
+#window {
+  height: 300px;
+  border: 2px grey solid;
+  border-radius: 10px;
 }
 
-p {
-	font-size: 1.2rem;
-	color: #fff;
-	text-align:center;
+#scroll {
+  height: 300px;
+  background-color: white;
+  overflow: auto;
+}
+
+#windowHeader {
+  height: 25px;
+  background-color: #dbdbdb;
+  border-radius: 8px;
+  color: black;
+  font-weight: bold;
+  text-align: center;
 }
 
 </style>
@@ -114,30 +109,80 @@ p {
 
 <body>
 
-	<div class='stars'></div>
-	<div class='twinkling'></div>
-	<div class='clouds'>
-		
+	<div id='header'>
+		<ul id='navigation'>
+			<li >
+				<a href="/">Home</a>
+			</li>
+			<li >
+				<a href="/projects.html">Projects</a>
+			</li>
+			<li >
+				<a href="/resume.html">Resume</a>
+			</li>
+		</ul>
+	</div>
 
-		<h1><strong>Distance Between Locations
 
 
-		<p id="response">
-			
 
-		</p>
+	<p><img id="homeImage" alt="Me sitting" srcset="/images/home.jpg, /images/homeSmall.jpg 2x" style="margin-right:20px;">Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here</p>
 
 
-		<form>	
-			<br>
 
-			<input type="text" id="loc1" value="St Paul">
-			<input type="text" id="loc2" value="London">
-			<input type="button" id="calculate" value="Calculate" onclick="calculateDistance( document.getElementById('loc1').value, document.getElementById('loc2').value );">
 
-		</form>
 
-		</strong></h1>
+
+	<div id="window">
+		<div id="windowHeader">Recent Work</div>
+
+	  <div id="scroll">
+	    <ul>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	      <li>Sample</li>
+	    </ul>
+	  </div>
+
+	</div>
+
+	
 
 
 
