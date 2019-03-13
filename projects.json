@@ -1,0 +1,52 @@
+{
+  "items": [
+    {
+      "title":"Information Security Server Vulnerabilities",
+      "description": "Found vulnerabilities in javascript and sql databases to get access to sensitive data",
+      "images": [
+        "/CISC-375-MyWebsite/images/sql.jpg",
+        "/CISC-375-MyWebsite/images/js.jpg"
+        ]
+    },
+    {
+      "title":"Java Stack and Queue",
+      "description": "While in my Data Structures class, I created my own stack and queue structure using Java",
+      "images": [
+        "/CISC-375-MyWebsite/images/java.jpg",
+        "/CISC-375-MyWebsite/images/stackqueue.jpg"
+        ]
+    },
+    {
+      "title":"Divide and Conquer algorithms",
+      "description": "Given example problems to solve, wrote algorithm in psuedocode using the divide and conquer strategy",
+      "images": [
+        "/CISC-375-MyWebsite/images/dandq.jpg",
+        "/CISC-375-MyWebsite/images/psuedo.jpg"
+        ]
+    },
+    {
+      "title":"Page monitor application",
+      "description": "Using Python, wrote an application used to notify a change on the web via text, call, tweet, and more",
+      "images": [
+        "/CISC-375-MyWebsite/images/python.jpg",
+        "/CISC-375-MyWebsite/images/html.jpg"
+        ]
+    },
+    {
+      "title":"Slack and Discord service",
+      "description": "Developer a Slack and Discord service to notify subscribers of clothing and shoe drops/restocks",
+      "images": [
+        "/CISC-375-MyWebsite/images/slack.jpg",
+        "/CISC-375-MyWebsite/images/discord.jpg"
+        ]
+    },
+    {
+      "title":"Online Distance Calculator",
+      "description": "Wrote a simple online distance calculator in which you could provide two locations and it would tell you the distance between in miles.",
+      "images": [
+        "/CISC-375-MyWebsite/images/calc.jpg",
+        "/CISC-375-MyWebsite/images/globe.jpg"
+        ]
+    }
+  ]
+}

@@ -1,0 +1,20 @@
+{
+  "items": [
+    {
+      "description": "Software Engineer Internship",
+      "image": "/CISC-375-MyWebsite/images/se.jpg"
+    },
+    {
+      "description": "Data Structures - CISC 231",
+      "image": "/CISC-375-MyWebsite/images/ust.jpg"
+    },
+    {
+      "description": "Information Security - CISC 340",
+      "image": "/CISC-375-MyWebsite/images/ust.jpg"
+    },
+    {
+      "description": "Started VangardCo",
+      "image": "https://cdn.shopify.com/s/files/1/2091/8459/products/prof_grande.jpg?v=1532090704"
+    }
+  ]
+}
