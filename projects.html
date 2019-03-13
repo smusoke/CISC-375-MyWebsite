@@ -21,8 +21,8 @@ body{
 	position: relative;
     top: 0;
     width: 100%;
-    max-width: 90%;
-    padding: 20px 40px;
+    max-width: 80%;
+    padding: 20px 10%;
     font-weight: bold;
 }
 
@@ -92,13 +92,70 @@ p{
 }
 
 
+
+
+
+
+.dropbtn {
+  background-color: #3498DB;
+  color: white;
+  height: 100%;
+  font-size: 1rem;
+  border: none;
+  cursor: pointer;
+}
+
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #2980B9;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+  width: 30%;
+  height: 20px;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  overflow: auto;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+  overflow-y:auto;
+  height: 200px;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 10px 12px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown a:hover {
+	background-color: #ddd;
+}
+
+.show {
+	display: block;
+}
+
 </style>
 
 
 
-<body onload="populateProjects();">
+<body onload="populateProjects(); populateLanguages();">
 
-	
+	<div class="dropdown">
+	  <button onclick="drop();" class="dropbtn">Translate</button>
+	  <div id="myDropdown" class="dropdown-content">
+	  	<a id="en" onclick="populate();">English</a>
+	  </div>
+	</div>
+
 
 	<div id='header'>
 		<ul id='navigation'>
