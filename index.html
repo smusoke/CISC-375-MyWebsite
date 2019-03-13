@@ -4,14 +4,17 @@
 
 <head>
 	<title>Steffan Musoke</title>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="/CISC-375-MyWebsite/scr.js"></script>
 	<link rel="icon" href="https://image.flaticon.com/icons/svg/318/318959.svg">
+	<link href="/CISC-375-MyWebsite/css/lightbox.css" rel="stylesheet">
+	<script src="/CISC-375-MyWebsite/js/lightbox-plus-jquery.js"></script>
 </head>
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 <style>
 
 body{
-	font-family: 'Roboto', sans-serif;
+	font-family: 'Josefin Slab', serif;
 }
 
 #header{
@@ -63,33 +66,44 @@ li:hover {
 
 #homeImage{
 	float:left;
-	width: 30%;
-	margin-left: 5%;
+	width: 25%;
+	margin-left: 40%;
 	border-radius: 10px;
 	display: block;
 }
 
 p{
-	margin-top: 6%;
+	margin-top: 2%;
+	margin-bottom: 5%;
+	margin-left: 5%;
+	margin-right: 5%;
 	display:inline-block;
 	font-size: 1.5em;
 	color: #626262;
+	font-family: 'Roboto', serif;
+	font-size: 1.6rem;
+	font-style: italic;
 }
 
-
+#footer{
+	margin-top: 30px;
+	margin-right: 10px;
+}
 
 
 
 
 
 #window {
-  height: 300px;
-  border: 2px grey solid;
+  height: 25%;
+  border: 2px black solid;
   border-radius: 10px;
+  margin-left: 2%;
+  margin-right: 2%;
 }
 
 #scroll {
-  height: 300px;
+  height: 25%;
   background-color: white;
   overflow: auto;
 }
@@ -97,36 +111,49 @@ p{
 #windowHeader {
   height: 25px;
   background-color: #dbdbdb;
-  border-radius: 8px;
+  border-radius: 6px;
   color: black;
-  font-weight: bold;
-  text-align: center;
+}
+
+#windowHeader p{
+	margin-top: 2px;
+	display: inline-block;
+	color: black;
+	font-weight: bold;
+	font-size: 1.3em;
+	margin-left: 6px;
+	font-family: 'Josefin Slab', serif; 
 }
 
 </style>
 
 
 
-<body>
+<body onload="populate();">
+
+	<div id="ytWidget" style="float: right;"></div><script src="yandex.js" type="text/javascript"></script>
+	
 
 	<div id='header'>
 		<ul id='navigation'>
 			<li >
-				<a href="/">Home</a>
+				<a href="/CISC-375-MyWebsite/">Home</a>
 			</li>
 			<li >
-				<a href="/projects.html">Projects</a>
+				<a href="/CISC-375-MyWebsite/projects.html">Projects</a>
 			</li>
 			<li >
-				<a href="/resume.html">Resume</a>
+				<a href="/CISC-375-MyWebsite/resume.html">Resume</a>
 			</li>
 		</ul>
+
+	<hr>
+
 	</div>
 
 
-
-
-	<p><img id="homeImage" alt="Me sitting" srcset="/images/home.jpg, /images/homeSmall.jpg 2x" style="margin-right:20px;">Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here Here here here here here here here</p>
+	<img id="homeImage" alt="Me sitting" srcset="/CISC-375-MyWebsite/images/home.jpg, /CISC-375-MyWebsite/images/homeSmall.jpg 2x">
+	<p>&nbsp;&nbsp;&nbsp;&nbsp; A motivated computer science student currently in his third year at the University of St. Thomas.  With 3 years of developing experience, seeking to further improve upon the already developed team skills, determination, and self-motivation acquired from being a collegiate student athlete and entrepreneur.</p>
 
 
 
@@ -134,57 +161,21 @@ p{
 
 
 	<div id="window">
-		<div id="windowHeader">Recent Work</div>
+		<div id="windowHeader"><p>
+		Recent Work</p></div>
 
 	  <div id="scroll">
-	    <ul>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
-	      <li>Sample</li>
+	    <ul id="items">
+	      
 	    </ul>
 	  </div>
 
 	</div>
 
-	
 
 
+
+	<div id="footer" style="height: 12px; float: right;">Translation Powered by Yandex.Translate</div>
 
 
 

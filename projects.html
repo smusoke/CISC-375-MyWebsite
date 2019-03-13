@@ -4,12 +4,18 @@
 
 <head>
 	<title>Steffan Musoke</title>
-	<script type="text/javascript" src="script.js"></script>
+	<script type="text/javascript" src="/CISC-375-MyWebsite/scr.js"></script>
 	<link rel="icon" href="https://image.flaticon.com/icons/svg/318/318959.svg">
+	<link href="/CISC-375-MyWebsite/css/lightbox.css" rel="stylesheet">
+	<script src="/CISC-375-MyWebsite/js/lightbox-plus-jquery.js"></script>
 </head>
-<link href='https://fonts.googleapis.com/css?family=Archivo' rel='stylesheet'>
+<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 <style>
 
+body{
+	font-family: 'Josefin Slab', serif;
+}
 
 #header{
 	position: relative;
@@ -17,6 +23,7 @@
     width: 100%;
     max-width: 90%;
     padding: 20px 40px;
+    font-weight: bold;
 }
 
 div{
@@ -56,28 +63,70 @@ li:hover {
 	font-size: 2.4em;
 }
 
+
+#homeImage{
+	float:left;
+	width: 25%;
+	margin-left: 2%;
+	border-radius: 10px;
+	display: block;
+}
+
+p{
+	margin-top: 6%;
+	display:inline-block;
+	font-size: 1.5em;
+	color: #626262;
+	font-family: 'Roboto', serif;
+}
+
+
+#projects li{
+	width:30%;
+	font-family: 'Roboto', serif;
+}
+
+#footer{
+	margin-top: 30px;
+	margin-right: 10px;
+}
+
+
 </style>
 
 
 
-<body>
+<body onload="populateProjects();">
+
+	<div id="ytWidget" style="float: right;"></div><script src="yandex.js" type="text/javascript"></script>
+	
 
 	<div id='header'>
 		<ul id='navigation'>
 			<li >
-				<a href="/">Home</a>
+				<a href="/CISC-375-MyWebsite/">Home</a>
 			</li>
 			<li >
-				<a href="/projects.html">Projects</a>
+				<a href="/CISC-375-MyWebsite/projects.html">Projects</a>
 			</li>
 			<li >
-				<a href="/resume.html">Resume</a>
+				<a href="/CISC-375-MyWebsite/resume.html">Resume</a>
 			</li>
 		</ul>
+
+	<hr>
+
 	</div>
-	
 
 
+
+	<ul id="projects">
+
+	</ul>
+
+
+
+	<div id="footer" style="height: 12px; float: right;">Translation Powered by Yandex.Translate</div>
 
 
 
