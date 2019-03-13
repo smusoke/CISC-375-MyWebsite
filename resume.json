@@ -1,0 +1,27 @@
+{
+  "items": [
+    {
+      "description": {
+        "University of St. Thomas":"Currently hold a 3.79 GPA<br> Member of the Dean's list every semester(5x)<br> Favorite Class: Philosophy of the Human Person<br> Favorite Area of Study: Programming and Problem Solving"
+      },
+      "title": "Education"
+    },
+    {
+      "description": {
+        "Software Developer":"Wrote a program using Python that sold nearly 400 copies <br> Developed a large following in the sneaker community as a developer, providing CS insight to my followers <br> Created a notification service that currently has about 1200 active monthly users <br> Maintained the website containing my services",
+        "Entreprenuer":"Self made sneaker store that has over 300 sales <br> Customer service experience dealing with buyers since the inception of the business <br> Expereince cooperating with buyers to come to an agreement on prices and deals",
+        "Collegiate Student Athlete":"Varsity Basketball player for 3 years <br> Part of NCAA tournament appearance and Conference Championshiop <br> Learned valuable life skills such as teamwork, dedication, hard work, and many others"
+      },
+      "title": "Experience"
+    },
+    {
+      "description": {
+        "Python":"4 years",
+        "Java":"2 years",
+        "Javascript":"First semester",
+        "Intangibles":"Leadership, Determination, Hard work, Confident, Authentic, Dependable - developed from coaches, family, and entire 13 year Basketball career"
+      },
+      "title": "Skills"
+    }
+  ]
+}

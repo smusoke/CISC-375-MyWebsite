@@ -46,6 +46,8 @@ function populate()
 }
 
 
+
+
 function populateProjects(){
   
 	var req = new XMLHttpRequest();
@@ -115,6 +117,163 @@ function populateProjects(){
 }
 
 
+function populateResume(){
+  
+	var req = new XMLHttpRequest();
+
+	req.onreadystatechange = function(){
+		if (req.readyState == 4 && req.status == 200){
+			result = JSON.parse(req.responseText);
+			items = [];
+
+			for(i = 0; i < result.items.length; i++)
+			{
+				//Create li
+				category = document.createElement("div");
+				category.innerHTML = result.items[i].title;
+				category.className = "category";
+
+				//add
+				document.getElementById("resume").appendChild(category);
+
+
+				//Create category div
+				categoryBorder = document.createElement("div");
+				categoryBorder.className = "categoryBorder";
+
+				//create ul
+				categoryText = document.createElement("ul")
+				categoryText.className = "categoryText"
+				categoryText.textAlign = "center";
+				categoryText.style.listStyleType = "list-style-type : square;";
+
+				//Create each entry
+				for( var key in result.items[i].description ){
+
+					//create li
+					li = document.createElement("li");
+					li.innerHTML = key;
+
+					categoryText.appendChild(li);
+
+					//create p
+					p = document.createElement("p");
+					p.innerHTML = result.items[i].description[key];
+
+					categoryText.appendChild(p);
+				}
+
+			
+
+
+				categoryBorder.appendChild(categoryText);
+				
+				document.getElementById("resume").appendChild(categoryBorder);
+
+			}
+		}
+
+		else
+		{
+			console.log(req);
+		}
+	}
+
+	req.open("GET","/CISC-375-MyWebsite/resume.json", true);
+	req.send();	
+}
+
+
+function populateLanguages(){
+	var req = new XMLHttpRequest();
+
+	req.onreadystatechange = function(){
+		if (req.readyState == 4 && req.status == 200){
+			result = JSON.parse(req.responseText);
+			holder = document.getElementById("myDropdown");
+			
+			//loop through langs
+			for(var key in result.langs){
+				opt = document.createElement("a");
+				opt.id = key;
+				opt.textContent = result.langs[key];
+				opt.setAttribute('onclick','translatePage(this.id);');
+
+				holder.appendChild(opt);
+
+			}
+			console.log(result.langs);
+		}
+		
+
+		else
+		{
+			console.log(req);
+		}
+	}
+
+	req.open("GET","https://translate.yandex.net/api/v1.5/tr.json/getLangs?ui=en&key=trnsl.1.1.20190313T195804Z.93846cdb1aef210b.822b60f0efbb58a7926f3edd2c9fb6b167235563", true);
+	req.send();	
+}
+
+
+function translatePage(language){
+
+
+	var elements = document.getElementsByTagName("p");
+
+	for (var i = 0; i < elements.length; i++) {
+	    if(elements[i].textContent != undefined && elements[i].textContent != ""){
+	    	translate( elements[i].textContent, language, elements[i]);
+	    }
+	}
+
+	var elements = document.getElementsByTagName("a");
+
+	for (var i = 0; i < elements.length; i++) {
+	    if(elements[i].textContent != undefined && elements[i].textContent != ""){
+	    	translate( elements[i].textContent, language, elements[i]);
+	    }
+	}
+}
+
+
+
+function translate(words, language, element){
+	var req = new XMLHttpRequest();
+
+	parser = new DOMParser();
+
+
+	req.onreadystatechange = function(){
+		if (req.readyState == 4 && req.status == 200){
+			
+			xml = parser.parseFromString(req.responseText,"text/xml");
+
+
+			var hold = "" + xml.getElementsByTagName("text")[0].childNodes[0].nodeValue;
+
+			element.innerHTML = hold;
+
+			}
+		
+
+		else
+		{
+			console.log('');
+		}
+
+	}
+
+
+	req.open("POST","https://translate.yandex.net/api/v1.5/tr/translate?lang="+language+"&key=trnsl.1.1.20190313T195804Z.93846cdb1aef210b.822b60f0efbb58a7926f3edd2c9fb6b167235563&text="+words, true);
+	req.send();	
+}
+
+
+function drop() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
 
 function sendAlert(){
 	console.log("yay");
