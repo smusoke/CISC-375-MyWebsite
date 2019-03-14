@@ -209,7 +209,7 @@ function populateLanguages(){
 
 		else
 		{
-			alert(req.responseText);
+			console.log(req.responseText);
 		}
 	}
 
