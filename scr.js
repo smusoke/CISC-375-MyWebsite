@@ -209,7 +209,7 @@ function populateLanguages(){
 
 		else
 		{
-			console.log(req);
+			alert(req.responseText);
 		}
 	}
 
@@ -247,6 +247,8 @@ function translate(words, language, element){
 
 
 	req.onreadystatechange = function(){
+		errors = [401,402,404,413,422,501];
+
 		if (req.readyState == 4 && req.status == 200){
 			
 			xml = parser.parseFromString(req.responseText,"text/xml");
@@ -259,9 +261,9 @@ function translate(words, language, element){
 			}
 		
 
-		else
+		else if ( errors.includes(req.status) )
 		{
-			console.log('');
+			alert(req.status);
 		}
 
 	}
