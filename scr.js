@@ -83,9 +83,10 @@ function populateProjects(){
 				//Create <a> elements
 				for(x = 0; x < result.items[i].images.length; x++){
 					a = document.createElement("a");
-					a.href = result.items[i].images[x];
-					a.setAttribute("data-lightbox","project" + i);
+					a.setAttribute("data","project" + i);
+					a.setAttribute("onclick","lightboxImage('"+result.items[i].images[0]+"', '"+result.items[i].description+"');");
 					a.style.display = "block";
+
 
 
 					a.setAttribute("data-title", result.items[i].description);
@@ -268,6 +269,19 @@ function translate(words, language, element){
 
 	req.open("POST","https://translate.yandex.net/api/v1.5/tr/translate?lang="+language+"&key=trnsl.1.1.20190313T195804Z.93846cdb1aef210b.822b60f0efbb58a7926f3edd2c9fb6b167235563&text="+words, true);
 	req.send();	
+}
+
+
+function lightboxImage(source,description){
+	hold = document.getElementById("lightbox");
+	if (hold.style.display === "none") {
+	    hold.style.display = "block";
+	  } else {
+	    hold.style.display = "none";
+	  }
+
+	document.getElementById("lightImage").src = source;
+	document.getElementById("description").innerHTML = description;
 }
 
 

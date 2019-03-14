@@ -3,12 +3,13 @@
 <html>
 
 <head>
+
 	<title>Steffan Musoke</title>
 	<script type="text/javascript" src="/CISC-375-MyWebsite/scr.js"></script>
 	<link rel="icon" href="https://image.flaticon.com/icons/svg/318/318959.svg">
-	<link href="/CISC-375-MyWebsite/css/lightbox.css" rel="stylesheet">
-	<script src="/CISC-375-MyWebsite/js/lightbox-plus-jquery.js"></script>
+
 </head>
+
 <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 <link href="https://fonts.googleapis.com/css?family=Josefin+Slab" rel="stylesheet">
 <style>
@@ -143,6 +144,45 @@ p{
 	display: block;
 }
 
+.lightbox{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 9999;
+    background-color: white;
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=80);
+    opacity: 0.98;
+    display: none;
+	
+
+    min-width: 99%;
+    min-height: 100vh;
+    display: block;
+    text-align:center
+}
+
+
+
+.lightbox #lightImage {
+	margin-top: 10%;
+    max-height: 400px;
+    height: 100%;
+    width: auto;
+    vertical-align: bottom; 
+}
+
+#closeButton{
+	float:right;
+	width:30px;
+}
+
+#description{
+	margin-top: 2%;
+	margin-left: 14%;
+	margin-right: 14%;
+	font-size: 1.2rem;
+}
+
 </style>
 
 
@@ -179,6 +219,13 @@ p{
 	<ul id="projects">
 
 	</ul>
+
+
+	<div id="lightbox" class="lightbox" style="display: none;">
+		<img id="closeButton" onclick="lightboxImage('');" src="/CISC-375-MyWebsite/images/close.jpg">
+		<img id="lightImage" src="">
+		<div id="description">Test words</div>
+	</div>
 
 
 
