@@ -2,9 +2,9 @@
   "items": [
     {
       "description": {
-        "University of St. Thomas":"Currently hold a 3.79 GPA<br> Member of the Dean's list every semester(5x)<br> Favorite Class: Philosophy of the Human Person<br> Favorite Area of Study: Programming and Problem Solving"
+        "<a href='https://www.stthomas.edu/'>University of St. Thomas</a>":"Currently hold a 3.79 GPA<br> Member of the Dean's list every semester(5x)<br> Favorite Class: Philosophy of the Human Person<br> Favorite Area of Study: Programming and Problem Solving"
       },
-      "title": "Education"
+      "title": "<a href='https://www.stthomas.edu/cisc/' >Education</a>"
     },
     {
       "description": {
