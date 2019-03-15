@@ -223,6 +223,7 @@ function translatePage(language){
 
 	var elements = document.getElementsByTagName("p");
 
+	//Loop through all ps
 	for (var i = 0; i < elements.length; i++) {
 	    if(elements[i].textContent != undefined && elements[i].textContent != ""){
 	    	translate( elements[i].textContent, language, elements[i]);
@@ -231,6 +232,7 @@ function translatePage(language){
 
 	var elements = document.getElementsByTagName("a");
 
+	//Loop through all as
 	for (var i = 0; i < elements.length; i++) {
 	    if(elements[i].textContent != undefined && elements[i].textContent != ""){
 	    	translate( elements[i].textContent, language, elements[i]);
@@ -241,6 +243,7 @@ function translatePage(language){
 
 
 function translate(words, language, element){
+	//Translates individual element
 	var req = new XMLHttpRequest();
 
 	parser = new DOMParser();
@@ -275,6 +278,8 @@ function translate(words, language, element){
 
 
 function lightboxImage(source,description){
+
+	//Toggles lightbox
 	hold = document.getElementById("lightbox");
 	if (hold.style.display === "none") {
 	    hold.style.display = "block";
